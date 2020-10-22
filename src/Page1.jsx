@@ -42,12 +42,10 @@ const Page1 = () => {
 
     $.ajax(settings).done(function (response) {
       console.log(response);
-      if(response.Response === 'True')
-      setdetailedResult(response);
+      if (response.Response === "True") setdetailedResult(response);
       else if (response.Response === "False") {
         alert(response.Error);
       }
-
     });
   };
   let resultListItems;
